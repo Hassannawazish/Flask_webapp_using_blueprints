@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1>Welcome</h1>
+        <h2>You can add your suggestions here for improving the 3D print Quality  </h2>
+      {% if current_user.is_authenticated %}
+      <p>Hi {{ current_user.username }}!</p>
+      {% else %}
+      <p>Please login or register!</p>
+      {% endif %}
+    </div>
+
+{% endblock %}

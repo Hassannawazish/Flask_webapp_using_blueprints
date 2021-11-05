@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1>Do you have more than 5 years experience in CAD designs and 3D printing ?</h1>
+        <p>Add a new suggestion to our database!</p>
+
+        <form method="POST">
+            {{form.hidden_tag()}}
+            {{form.user_name.label}}{{form.user_name()}}
+            {{form.suggestion.label}}{{form.suggestion()}}
+            {{form.submit()}}
+        </form>
+
+    </div>
+
+{% endblock %}
